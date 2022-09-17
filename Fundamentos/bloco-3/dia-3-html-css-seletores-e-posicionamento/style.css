@@ -1,12 +1,5 @@
-
-li:hover {
-background-color: greenyellow;
-
-}
-li:active {
-  color: white;
-}
-
-ol {
-  list-style-position: outside;
+div:hover {
+border-width: medium;
+border-style: ridge;
+border-color: greenyellow;
 }
