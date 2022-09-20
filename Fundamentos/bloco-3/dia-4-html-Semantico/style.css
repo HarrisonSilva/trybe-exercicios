@@ -1,22 +1,39 @@
 h1 {
     text-align: center;
+    background-color: rgb(196, 169, 52);
 }
-.first {
-  display: block;
-  margin-left: 500px;
+.h3text1 {
+    
+text-align: center;
+background-color: brown;
+color: rgb(0, 255, 0);
+    
 }
-.second {
-    display: block;
-    margin-left: 300px;
+.h3text2 {
+    position: absolute;
+    left: 40%;
+    top: 9%;
+    color: blue;
 }
-.third {
-    display: block;
-    margin-left: 600px;
-    margin-top: -50px;
+.h3text3 {
+    position: absolute;
+    top: 9%;
+    left: 56%;
+    color: blue;
+
 }
-section {
-    text-align: center;
+article div p {
+width: 50%;
+
 }
-li {
-    display: inline;
+p {
+padding-left: 25%;
+text-align: center;
+}
+.bixo {
+    width: 15%;
+    position: absolute;
+    top: 18%;
+    left: 43%;
+    border-radius: 5px;
 }
