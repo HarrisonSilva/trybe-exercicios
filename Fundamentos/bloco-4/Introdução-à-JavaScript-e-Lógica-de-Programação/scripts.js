@@ -1,10 +1,9 @@
-const a = 5;
-const b = 5;
-const c = 6;
-if (a > b && a > b && a > c) {
-    console.log("A e maior que b e c")
-} else if (b > a && b > c) {
-    console.log("b e aior que a e c");
+let n1 = 1;
+let n2 = 2;
+if(n1 == 2 && n1 == 2) {
+    console.log("negativo");
+} else if(n1 == 1 && n2 == 1) {
+    console.log("Positivo");
 } else {
-    console.log("c e maior que a e b")
+    console.log("0");
 }
