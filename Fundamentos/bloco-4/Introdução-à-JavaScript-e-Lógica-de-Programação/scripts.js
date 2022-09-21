@@ -1,13 +1,10 @@
 const a = 5;
 const b = 5;
-console.log("Soma: " + (a + b));
-console.log("Subtração: " + (a - b));
-console.log("Multiplicação: " + (a * b));
-console.log("Divisão: " + (a / b));
-console.log("Modulo: " + (a % b));
-
-if (a > b) {
-    console.log("a e maior que b");
+const c = 6;
+if (a > b && a > b && a > c) {
+    console.log("A e maior que b e c")
+} else if (b > a && b > c) {
+    console.log("b e aior que a e c");
 } else {
-    console.log("b e maior que a");
+    console.log("c e maior que a e b")
 }
