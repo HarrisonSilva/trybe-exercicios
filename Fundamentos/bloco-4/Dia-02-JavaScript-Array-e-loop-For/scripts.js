@@ -4,6 +4,5 @@ let resultado = 0;
 for (let i = 0; i < numbers.length; i += 1) {
     /* console.log(numbers[i]) */
     resultado += numbers[i];
-
 }
-console.log(resultado);
+console.log(resultado / numbers.length);
