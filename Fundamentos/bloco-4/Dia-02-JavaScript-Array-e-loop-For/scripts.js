@@ -6,3 +6,8 @@ for (let i = 0; i < numbers.length; i += 1) {
     resultado += numbers[i];
 }
 console.log(resultado / numbers.length);
+if (resultado / numbers.length > 20) {
+    console.log("valor maior que 20")
+}else if (resultado / numbers.length <= 20) {
+    console.log("valor menor ou igual a 20")
+}
