@@ -1,15 +1,26 @@
-const numero1 = 100;
-const numero2 = 60;
-const numero3 = 20;
-let soma = numero1 + numero2 + numero3;
-let verificacao = numero1 > 0 && numero2 > 0 && numero3 > 0;
+let peçaDeXadrez = "jao";
 
-if (verificacao) {
-    if (soma === 180) {
-    console.log(true);
-} else {
-    console.log(false);
-};
-} else {
-    console.log("Numero invalido");
+switch(peçaDeXadrez) {
+    case "peao": console.log("peao -> uma ou duas casas para cima");
+    break;
+    case "cavalo": console.log("cavalo -> um L pra qualquer lado");
+    break;
+    case "bispo": console.log("bispo -> diagonal para qualquer lado");
+    break;
+    case "torre": console.log("torre -> todas casas pra cima ou para os lados");
+    break;
+    case "rainha": console.log("qualquer casa pra qualquer lado");
+    break;
+    case "rei": console.log("uma casa pra qualquer lado");
+    break;
+
+    default:
+        console.log("Erro, peça invalida!");
+
+
+
+
+
+
+
 }
