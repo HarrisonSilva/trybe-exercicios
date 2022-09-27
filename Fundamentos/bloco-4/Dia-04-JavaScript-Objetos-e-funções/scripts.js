@@ -5,5 +5,5 @@ let info = {
     recorrente: 'Sim'
   };
 for (let key in info) {
-    console.log(info);
+    console.log(key, info[key]);
 }
