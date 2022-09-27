@@ -12,4 +12,13 @@ let leitor = {
     ],
     
   };
-  console.log("O Livro favorito de", leitor.nome, leitor.sobrenome, "se chama", leitor.livrosFavoritos[0].titulo);
+  
+    leitor.livrosFavoritos.push(
+    {
+    titulo: 'Harry Potter e o Prisioneiro de Azkaban',
+    autor: 'JK Rowling',
+    editora: 'Rocco',
+    }
+) 
+  console.log("O Livro favorito de", leitor.nome, leitor.sobrenome, "se chama", leitor.livrosFavoritos[0].titulo); 
+  console.log(leitor);
