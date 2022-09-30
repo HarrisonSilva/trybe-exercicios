@@ -2,4 +2,4 @@ const meuElemento = document.getElementById("elementoOndeVoceEsta");
 
 meuElemento.parentNode.style.color = "pink";
 
-meuElemento.firstElementChild.innerText = "Trybe";
+meuElemento.firstChild.innerText = "Trybe";
