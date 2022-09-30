@@ -7,4 +7,10 @@ meuElemento.firstElementChild.innerText = "Trybe";
 const meuPai = document.getElementById("pai");
 meuElemento.parentElement
 
- console.log(meuElemento.nextElementSibling); /* meuElemento.nextElementSibling */
+meuElemento.nextElementSibling
+ 
+
+console.log(meuPai.lastChild.previousElementSibling.previousElementSibling);
+
+let jao = document.createElement("div");
+console.log(jao);
