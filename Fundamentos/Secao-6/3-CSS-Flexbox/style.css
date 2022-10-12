@@ -76,7 +76,8 @@
     justify-content: center;
     margin: 10px;
     flex-basis: 16%;
-    flex-grow: 10;
+    flex-grow: 10; 
+    flex-shrink: 1;
     
     
 }
