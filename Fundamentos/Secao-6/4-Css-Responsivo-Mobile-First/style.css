@@ -53,8 +53,35 @@
    h1 {
     display: flex;
     justify-content: center;
-    font-size: large;
+    font-size: 50px;
+    background-color: aqua;
+    border-radius: 20px;
+    padding: 0%;
     
    }
-    
+    article {
+        font-size: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    img {
+        display: flex;
+        width: 600px;
+        padding: 15px;
+        
+        
+    }
+    h2 {
+        font-size: 20px;
+        text-align: left;
+        text-decoration: underline;
+    }
+    figcaption {
+        text-align: center;
+        font-size: larger;
+    }
+    body {
+        margin: 10px;
+    }
   }
