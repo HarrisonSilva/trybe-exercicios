@@ -1,0 +1,14 @@
+const arrays = [
+    ['1', '2', '3'],
+    [true],
+    [4, 5, 6],
+  ];
+  
+const flatten = (element) => {
+    // escreva seu código aqui
+    return element.reduce( (acc, curr) => {
+        return acc.concat(curr)
+    }, [] )
+  }
+
+  console.log(flatten(arrays));
