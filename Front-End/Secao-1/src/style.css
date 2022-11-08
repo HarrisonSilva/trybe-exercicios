@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(56, 43, 43, 95%);
+    color: azure;
+}
+
+button {
+width: 150px;
+padding: 10px;
+border-radius: 15px;
+background-color: rgb(107, 232, 11);
+color: rgb(28, 32, 32);
+border: none;
+}
+
+main {
+    background-color: rgb(56, 43, 43);
+    border-radius: 10px;
+    padding: 10px;
+
+}
+h2 {
+   color: rgb(60, 255, 0);
+}
