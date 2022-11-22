@@ -1,12 +1,12 @@
-import React from 'react'
-import Helloworld from './helloworld.js'
-import HelloJSX from './HelloJSX.jsx';
+import React from 'react';
+import About from './About';
 
-function App() {
-  return <>
-   <Helloworld />
-  <HelloJSX />
-  </>
-};
+class App extends React.Component {
+  render() {
+    return (
+      <About />
+    );
+  }
+}
 
 export default App;
