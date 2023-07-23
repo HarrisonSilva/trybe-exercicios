@@ -1,0 +1,11 @@
+Validador de Campos
+Crie um projeto npm do zero
+Instale o vite e a biblioteca que iremos utilizar: validator.js
+Estruture uma página HTML com um formulário
+O formulário deve possuir: campo para inserir o texto a ser validado, um dropdown para selecionar qual a validação deve ser feita, um botão para executar a validação e um texto que informe se o valor é válido ou não
+Faça, pelo menos, cinco validações utilizando a biblioteca validator. Aproveite e confira a documentação para ver exatamente como utilizá-la!
+Rode sua aplicação utilizando o vite
+Teste se sua aplicação é aprovada pelo lint da Trybe
+
+GABARITO
+https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/095ebb0d-1932-4d37-933b-9e1d721646fb/section/8ac6fde1-3393-44aa-908d-7cee814f89db/day/698331ce-d7b0-4d92-8c92-7281f556f1bf/lesson/9f20eec8-032b-4147-8ad3-659c19899fbb/solution
