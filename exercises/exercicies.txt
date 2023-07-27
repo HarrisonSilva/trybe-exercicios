@@ -1,0 +1,184 @@
+Utilizando o array abaixo, percorra-o somando todos os valores. Caso o valor final seja maior que 15, imprima-o. Caso seja igual ou menor que 15, imprima a mensagem: “valor menor que 16”:
+let fruits = [3, 4, 10, 1, 12];
+
+A resolução do problema acontece em 3 etapas:
+
+Interpretação;
+Criação do algoritmo;
+Codificação do algoritmo.
+Portanto, primeiro vamos interpretar o que está sendo pedido, e essa etapa é crucial para solucionar o problema. Se interpretarmos errado, o algoritmo e consequentemente o código estará errado.
+
+Analisando o enunciado, sabemos que:
+
+devemos utilizar o array fruits;
+o termo “percorra“ indica uma estrutura de repetição, ou loop;
+“somando todos os valores“ mostra que devemos ter uma variável que guarda o valor da soma dos valores;
+o termo “caso“ indica uma estrutura condicional, ou if;
+“imprima o valor final“ indica um console.log;
+Pode parecer um pouco bobo, mas, em enunciados complexos, analisar friamente o enunciado nos afasta de cometermos erros e termos que escrever todos os passos seguintes novamente.
+
+----------------------------------------------------------------------
+
+Agora vamos criar o algoritmo, e para isso faremos uso dos baby steps. Eles nos estimulam a dividir grandes e complexos problemas em pequenos e simples.
+
+Adicionar o array;
+Criar uma variável com valor 0;
+Criar um loop que percorre o array;
+Incrementar a variável com o valor correspondente a cada loop;
+Criar um if com a condição de a variável ser maior que 15;
+Caso a variável obedeça à condição:
+Imprimir a variável
+Caso não obedeça à condição:
+Imprimir a mensagem “valor menor que 16”.
+No momento, já interpretamos o problema e já criamos um algoritmo, com base nos baby steps, para ele. Como última etapa, vamos codificá-lo, seguindo nosso algoritmo:
+
+Adicionar o array;
+let fruits = [3, 4, 10, 1, 12];
+
+Criar uma variável com valor 0;
+let fruits = [3, 4, 10, 1, 12];
+let sum = 0;
+
+Criar um loop que percorre o array;
+let fruits = [3, 4, 10, 1, 12];
+let sum = 0;
+
+for (let index = 0; index < fruits.length; index += 1) {
+
+}
+
+Incrementar a variável com o valor correspondente a cada loop;
+let fruits = [3, 4, 10, 1, 12];
+let sum = 0;
+
+for (let index = 0; index < fruits.length; index += 1) {
+  sum += fruits[index];
+}
+
+Criar um if com a condição de a variável ser maior que 15;
+let fruits = [3, 4, 10, 1, 12];
+let sum = 0;
+
+for (let index = 0; index < fruits.length; index += 1) {
+  sum += fruits[index];
+}
+
+if (sum > 15) {
+
+} else {
+
+}
+
+Caso a variável obedeça à condição: Imprimir a variável;
+let fruits = [3, 4, 10, 1, 12];
+let sum = 0;
+
+for (let index = 0; index < fruits.length; index += 1) {
+  sum += fruits[index];
+}
+
+if(sum > 15) {
+  console.log(sum);
+} else {
+
+}
+
+Caso não obedeça à condição: Imprimir a mensagem “valor menor que 16”;
+let fruits = [3, 4, 10, 1, 12];
+let sum = 0;
+
+for (let index = 0; index < fruits.length; index += 1) {
+  sum += fruits[index];
+}
+
+if (sum > 15) {
+  console.log(sum);
+} else {
+  console.log('valor menor que 16');
+}
+
+----------------------------------------------------------------
+
+O fatorial é a multiplicação de um número natural pelos seus antecessores, exceto o zero. Por exemplo:
+O fatorial é representado pelo sinal !
+4! = 4 x 3 x 2 x 1 = 24
+
+Com base nessas informações, crie um algoritmo que imprima na tela o fatorial de 10.
+
+------------------------------------------------------------------
+
+Utilize a estrutura de repetição for para desenvolver um algoritmo que seja capaz de inverter uma palavra. Por exemplo, a palavra “banana” seria invertida para “ananab”. Utilize a string abaixo como exemplo, depois troque por outras para verificar se seu algoritmo está funcionando corretamente.
+let word = 'tryber';
+
+Considere o array de strings abaixo:
+let array = ['java', 'javascript', 'python', 'html', 'css'];
+
+Utilize a estrutura de repetição for para escrever dois algoritmos: um que imprima no console a maior palavra desse array e outro que imprima a menor. Considere o número de caracteres de cada palavra.
+Um número primo é um número inteiro maior do que 1 que possui somente dois divisores, ou seja, é divisível por 1 e por ele mesmo. Sabendo disso, escreva um algoritmo que imprima no console o maior número primo entre 2 e 50.
+
+GABARITO
+https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/fc998c60-386e-46bc-83ca-4269beb17e17/section/4791fd2b-f154-4c25-b4eb-cef521db8e61/day/9a292ead-b6cb-462b-a292-f0632395cb82/lesson/eda99194-c829-479f-95bf-73b66a35392d/solution
+
+--------------------------------------------------------
+
+Escreva um programa que, dado um valor n qualquer, seja n > 1, imprima na tela um quadrado feito de asteriscos de lado de tamanho n. Por exemplo:
+
+n = 5
+
+*****
+*****
+*****
+*****
+*****
+
+
+Faça o mesmo que antes, mas que imprima um triângulo retângulo com 5 asteriscos de base. Por exemplo:
+
+n = 5
+
+*
+**
+***
+****
+*****
+
+Agora inverta o lado do triângulo. Por exemplo:
+
+n = 5
+
+    *
+   **
+  ***
+ ****
+*****
+
+Depois, faça uma pirâmide com n asteriscos de base:
+
+n = 5
+
+  *
+ ***
+*****
+
+Faça uma pirâmide com n asteriscos de base que seja vazia no meio. Assuma que o valor de n será sempre ímpar:
+
+Por último, façamos com que a variável seja incrementada com o valor correspondente a cada loop;
+n = 7
+
+   *
+  * *
+ *   *
+*******
+
+---------------------------------------------------------------------------
+
+Faça um programa que diz se um número definido numa variável é primo ou não.
+Um número primo é um número que só é divisível por 1 e por ele mesmo, ou seja, a divisão dele por quaisquer outros números dá resto diferente de zero.
+
+Dica: você vai precisar de fazer um loop que vá de 0 ao número definido. Além disso, vai precisar fazer uma checagem a cada iteração e armazenar os resultados em algum lugar.
+
+GABARITO
+https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/fc998c60-386e-46bc-83ca-4269beb17e17/section/4791fd2b-f154-4c25-b4eb-cef521db8e61/day/9a292ead-b6cb-462b-a292-f0632395cb82/lesson/8fb6ba28-efb6-4e79-9574-3f4a749a842e/solution
+
+---------------------------------------------------------------------------------
+
