@@ -32,6 +32,9 @@ Caso não obedeça à condição:
 Imprimir a mensagem “valor menor que 16”.
 No momento, já interpretamos o problema e já criamos um algoritmo, com base nos baby steps, para ele. Como última etapa, vamos codificá-lo, seguindo nosso algoritmo:
 
+
+::
+
 Adicionar o array;
 let fruits = [3, 4, 10, 1, 12];
 
@@ -98,7 +101,7 @@ if (sum > 15) {
 }
 
 ----------------------------------------------------------------
-
+::
 O fatorial é a multiplicação de um número natural pelos seus antecessores, exceto o zero. Por exemplo:
 O fatorial é representado pelo sinal !
 4! = 4 x 3 x 2 x 1 = 24
