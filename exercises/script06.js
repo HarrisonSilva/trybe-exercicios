@@ -52,3 +52,14 @@ const nome = leitor.nome
 const sobreNome = leitor.sobrenome
 const titulo = leitor.livrosFavoritos[0].titulo
 console.log('O livro favorito de', nome, sobreNome, 'se chama', titulo);
+
+leitor.livrosFavoritos.push({
+  titulo: 'Harry Potter e o Prisioneiro de Azkaban',
+  autor: 'JK Rowling',
+  editora: 'Rocco',
+})
+console.log(leitor);
+
+const livrosFavoritos = leitor.livrosFavoritos.length
+
+console.log(`${nome} tem ${livrosFavoritos} livros favoritos`);
