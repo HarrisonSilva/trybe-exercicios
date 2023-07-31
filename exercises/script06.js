@@ -33,3 +33,22 @@ const nota = `${info.nota} e ${info2.nota}`
 const recorrente = info2.recorremte
 
 console.log(person, origem, nota, recorrente);
+
+
+let leitor = {
+  nome: 'Julia',
+  sobrenome: 'Pessoa',
+  idade: 21,
+  livrosFavoritos: [
+    {
+      titulo: 'O Pior Dia de Todos',
+      autor: 'Daniela Kopsch',
+      editora: 'Tordesilhas',
+    },
+  ],
+};
+
+const nome = leitor.nome
+const sobreNome = leitor.sobrenome
+const titulo = leitor.livrosFavoritos[0].titulo
+console.log('O livro favorito de', nome, sobreNome, 'se chama', titulo);
