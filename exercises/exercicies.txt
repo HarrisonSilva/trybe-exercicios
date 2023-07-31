@@ -39,6 +39,7 @@ GABARITO
 https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/fc998c60-386e-46bc-83ca-4269beb17e17/section/4791fd2b-f154-4c25-b4eb-cef521db8e61/day/e7b69d1f-3323-44a7-9d1b-0e49abc85d22/lesson/019b7c3d-b080-415d-8c34-0acede689116/solution
 
 --------------------------------------------------------------------------------------
+:::::
 
 Desenvolva cada exercício a seguir utilizando funções:
 
