@@ -46,4 +46,4 @@ const iFruts = ( ...fruit) => {
       }
 }
 
-iFruts('Uva');
+iFruts('Uva')
