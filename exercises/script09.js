@@ -28,8 +28,6 @@ const iFruts = ( ...fruit) => {
                 quantity += 1
             }
           }
-          // newFruits {} recebe fruit no I que e 'Melancia' e 'Jaca' do parametro 
-          //fruit
           newFruits[fruit[i]] = quantity
 
       }
