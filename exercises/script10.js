@@ -37,15 +37,9 @@
 
   console.log('O morador do bloco 2 de nome', nome, sobrenome, 'mora no', andar, 'andar, apartamento', apartamento);
 
-  /* Exercício 4
-Acesse as chaves nome, sobrenome,
- andar e apartamento do último morador 
- do blocoDois e faça um console.log no seguinte
-  formato: “O morador do bloco 2 de nome Zoey 
-  Brooks mora no 1° andar, apartamento 101”.
 
-Utilize o for para imprimir o nome completo de todos 
-os moradores do bloco 1, acessando suas chaves nome
- e sobrenome. Depois faça o mesmo para os moradores
-  do bloco 2.
- */
+
+  for (let nome in moradores) {
+    console.log(moradores[nome][0].nome, moradores[nome][0].sobrenome);
+    console.log(moradores[nome][1].nome, moradores[nome][0].sobrenome);
+  }
