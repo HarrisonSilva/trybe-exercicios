@@ -38,7 +38,6 @@ GABARITO
 https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/fc998c60-386e-46bc-83ca-4269beb17e17/section/d8690b8d-eaa4-4344-997c-cd1a2674076f/day/61f1b2b7-a34e-4ad9-8c2e-2c2db96e3d9c/lesson/d284bcba-89f4-47de-acb0-10f670ebe89c/solution
 
 ---------------------------------------------------------------------------------------------------------
-:::::::::::::::::::::::::::::::::::;
 <main id="paiDoPai">
   <section id="pai">
     <section id="primeiroFilho"></section>
@@ -89,6 +88,7 @@ elementoPai.removeChild(elementoFilho);
   GABARITO
   https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/fc998c60-386e-46bc-83ca-4269beb17e17/section/d8690b8d-eaa4-4344-997c-cd1a2674076f/day/61f1b2b7-a34e-4ad9-8c2e-2c2db96e3d9c/lesson/a9106a62-b6fc-48a2-a31c-7935eb40e752/solution
 
+:::::::::::::::::::::::::::::::::::;
 ---------------------------------------------------------------------------------------------------------------------
 
 <!DOCTYPE html>
