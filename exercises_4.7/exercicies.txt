@@ -1,0 +1,19 @@
+Imagine que você é a pessoa responsável por desenvolver uma página que servirá como um leitor de conteúdo escrito em que a pessoa usuária pode escolher as configurações da página.
+
+As pessoas devem ter o poder de alterar:
+
+Cor de fundo da tela;
+Cor do texto;
+Tamanho da fonte;
+Espaçamento entre as linhas do texto;
+Tipo da fonte (Font family).
+Essas preferências devem ser salvas de forma que, ao retornar à página, as preferências que foram previamente configuradas possam ser aplicadas na tela.
+
+Você também recebeu a imagem abaixo para ter uma referência de como a página ficará quando estiver pronta.
+
+
+GABARITO
+https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/fc998c60-386e-46bc-83ca-4269beb17e17/section/d8690b8d-eaa4-4344-997c-cd1a2674076f/day/601a2d75-6ae1-42e6-8e1a-afdfb0f0c4cc/lesson/ebf55d40-e1a8-4958-9775-47f078b1a5c9/solution
+
+--------------------------------------------------------------------------------------
+
