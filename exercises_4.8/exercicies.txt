@@ -1,0 +1,54 @@
+Vamos praticar um pouco, criando uma tela de login? 🔥
+
+Adicione os campos de entrada para email e senha.
+
+Adicione um checkbox com o texto Lembre-me.
+
+Adicione um botão com o texto Entrar; crie o botão através da tag <input>.
+
+Adicione os placeholder Digite seu email e Digite sua senha para os campos de email e senha.
+
+Adicione o atributo required para os campos de email e senha.
+
+Adicione o atributo autocomplete="off" para o campo de email.
+
+Adicione o atributo autofocus para o campo de email.
+
+
+GABARITO
+https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/fc998c60-386e-46bc-83ca-4269beb17e17/section/1be52f61-0858-4a22-a89a-ebef68b41a09/day/2e106b22-9918-44c1-ab29-e83c42cdd3d0/lesson/bb46ff9f-ed17-46bb-86ac-ff10b5a74540/solution
+
+----------------------------------------------------------------
+
+
+Crie um arquivo HTML index.html.
+Crie um arquivo Javascript script.js.
+Em seu arquivo HTML:
+Adicione o <script src="script.js"></script> no final do body do HTML.
+Copie os três elementos abaixo (a, input type="text", checkbox) em sua página
+Em seu arquivo Javascript.
+Adicione os seletores abaixo no começo do arquivo.
+
+<!-- elemento para copiar -->
+<a href="www.betrybe.com" target="_blank" id="href">TRYBE</a>
+<input type="text" id="input-text"/>
+<input type="checkbox" id="input-checkbox" />
+
+// SELETORES
+const INPUT_TEXT = document.querySelector("#input-text");
+const INPUT_CHECKBOX = document.querySelector("#input-checkbox");
+const HREF_LINK = document.querySelector("#href");
+
+Adicione um evento click no elemento a que possui o id href. Na função do evento, implemente o método .preventDefault() para prevenir o comportamento padrão do elemento. Ou seja, ao clicar no link, nada deve acontecer.
+
+Adicione um evento click no elemento checkbox que possui o id input-checkbox. Na função do evento, implemente o método .preventDefault() para prevenir o comportamento padrão do elemento. Ou seja, ao clicar na caixinha, nada deve acontecer.
+
+Adicione um evento keypress no elemento input type="text" que possui o id input-text. Na função do evento, implemente o método .preventDefault() de forma que somente o caractere a (letra ‘a’ minúscula) possa ser digitado na caixinha. (dica: para capturar a tecla digitada, utilize o event.key)
+
+Caso deseje entender melhor o comportamento do método .preventDefault(), acesse a documentação do MDN ou a página da w3schools.
+
+GABARITO
+https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/fc998c60-386e-46bc-83ca-4269beb17e17/section/1be52f61-0858-4a22-a89a-ebef68b41a09/day/2e106b22-9918-44c1-ab29-e83c42cdd3d0/lesson/6cb81720-0aa7-4da4-9e36-847e863ca3af/solution
+
+--------------------------------------------------------------------
+
