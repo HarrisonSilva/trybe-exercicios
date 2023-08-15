@@ -85,14 +85,48 @@ listValues(lesson3)
 
 
 const allLessons = {};
-const createObject = () => {
+const createObjectLessons = () => {
 
     Object.assign(allLessons, { aula1: lesson1.materia });
     Object.assign(allLessons, { aula2: lesson2.materia });
     Object.assign(allLessons, { aula3: lesson3.materia });
-
-    return allLessons;
 }
 
-createObject()
+createObjectLessons()
 
+
+const allStudents = {};
+const createObjectStudents = () => {
+
+    Object.assign(allStudents, { numeroEstudantes1: lesson1.numeroEstudantes });
+    Object.assign(allStudents, { numeroEstudantes2: lesson2.numeroEstudantes });
+    Object.assign(allStudents, { numeroEstudantes3: lesson3.numeroEstudantes });
+}
+
+createObjectStudents()
+
+const studentsLeassonsTotal = () => {
+    const matematica = allLessons.aula1
+    const historia = allLessons.aula2
+    const lesson1 = allStudents.numeroEstudantes1 + allStudents.numeroEstudantes3
+    const lesson2 = allStudents.numeroEstudantes2
+    console.log(`${matematica} Possui ${lesson1} Estudantes,
+    ${historia} Possui ${lesson2} Estudantes`);
+}
+studentsLeassonsTotal()
+/* 
+Crie uma função que obtenha o valor da chave de acordo com a sua 
+posição no objeto. Por exemplo:
+
+console.log(getValueByNumber(lesson1, 0));
+// Output: 'Matemática'
+
+Crie uma função que verifique se o par (chave / valor) existe na função. 
+Essa função deve possuir três parâmetros, sendo eles o objeto, o nome da 
+chave e o valor da chave. Exemplo:
+
+console.log(verifyPair(lesson3, 'turno', 'noite'));
+// Output: true,
+console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
+// Output: false
+ */
