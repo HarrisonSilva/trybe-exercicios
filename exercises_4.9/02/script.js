@@ -114,10 +114,19 @@ const studentsLeassonsTotal = () => {
     ${historia} Possui ${lesson2} Estudantes`);
 }
 studentsLeassonsTotal()
-/* 
-Crie uma função que obtenha o valor da chave de acordo com a sua 
-posição no objeto. Por exemplo:
 
+
+const getValueByNumber = (object, position) => {
+    const arrange = []
+    for (let i in object) {
+        arrange.push(object[i])  
+    }
+    console.log(arrange[position]);
+}
+
+
+getValueByNumber(allLessons, 2)
+/* 
 console.log(getValueByNumber(lesson1, 0));
 // Output: 'Matemática'
 
