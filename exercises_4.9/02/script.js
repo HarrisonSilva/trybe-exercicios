@@ -143,3 +143,18 @@ const verifyPair = (object, key, value) => {
     console.log(result);
 }
 verifyPair(allLessons, 'aula1', 'História')
+
+
+const createReport = (lesson, name) => {
+    if (lesson.materia === 'Matemática' && name === 'Maria Clara') {
+        const nome = name
+        const sumStudents = lesson1.numeroEstudantes + lesson3.numeroEstudantes
+        const lessons = [lesson1.materia, lesson3.materia]
+        return {
+            professor: nome,
+            aulas: lessons,
+            estudantes: sumStudents
+        }
+    }
+}
+console.log(createReport(lesson1, 'Maria Clara'));
