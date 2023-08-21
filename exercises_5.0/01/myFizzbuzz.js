@@ -6,6 +6,6 @@ function myFizzBuzz(num) {
   return num;
 }
 
-console.log(myFizzBuzz(15));
+console.log(myFizzBuzz());
 
 module.exports = myFizzBuzz
