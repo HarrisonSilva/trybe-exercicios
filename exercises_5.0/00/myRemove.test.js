@@ -1,4 +1,4 @@
-const myRemove = require("./script")
+const myRemove = require("./myRemove")
 
 
 describe("Tests myRemove function", () => {
