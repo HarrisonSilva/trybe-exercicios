@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "init": "^0.1.2"
+  },
+  "devDependencies": {
+    "jest": "^29.6.3"
+  },
+  "name": "trybe-exercicios",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HarrisonSilva/trybe-exercicios.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HarrisonSilva/trybe-exercicios/issues"
+  },
+  "homepage": "https://github.com/HarrisonSilva/trybe-exercicios#readme",
+  "description": ""
+}
