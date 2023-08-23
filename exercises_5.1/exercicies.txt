@@ -1,0 +1,252 @@
+Crie uma nova pasta e entre nela.
+mkdir fixacao-testes
+cd fixacao-testes
+
+Inicialize esta pasta como um projeto do node.
+npm init -y
+
+Instale o Jest.
+npm install -D jest
+
+Em seu arquivo package.json, altere a chave "scripts"para que seja
+"scripts": {
+  "test": "jest --coverage"
+},
+
+Crie um arquivo chamado createItem.js com o seguinte conteúdo:
+const createItem = (name, unit, price, quantity) => {
+  if (typeof name !== 'string') {
+    throw new Error('O nome do item deve ser uma string');
+  }
+  if (price <= 0) {
+    throw new Error('O preço do item deve ser maior que zero');
+  }
+  if (quantity === undefined) {
+    quantity = 0;
+  }
+  return {
+    name: name,
+    quantity: quantity,
+    unit: unit,
+    price: price,
+  };
+}
+module.exports = createItem;
+
+Crie um arquivo chamado createItem.test.js com o conteúdo abaixo:
+const createItem = require('./createItem');
+describe('a função createItem', () => {
+  it.todo('cria um item válido');
+  it.todo('utiliza zero como quantidade padrão');
+  it.todo('Lança um erro quando não recebe parâmetros');
+  it.todo('Lança um erro se o nome do item não é uma string');
+  it.todo('Lança um erro se o preço é negativo');
+  it.todo('Lança um erro se o preço é zero');
+});
+
+Teste se a função createItem cria um item válido.
+
+Remova o .todo do primeiro it e adicione a função que irá implementar o teste:
+
+  it('cria um item válido', () => {
+    // seus testes vão aqui!
+  });
+
+Construindo nosso teste:
+O que a função createItem recebe como parâmetro?
+Para a chamada da função createItem com os argumentos 'banana', 'kg', 1.99 e 20, qual o resultado esperado?
+Considerando como resultado esperado o objeto { name: 'banana', unit: 'kg', price: 1.99, quantity: 20 }, qual matcher mais adequado?
+Remova o .todo e implemente o teste para a chamada da função createItem com os argumentos 'banana', 'kg', 1.99 e 20, e verifique se o resultado é o objeto { name: 'banana', unit: 'kg', price: 1.99, quantity: 20 }.
+
+Qual a cobertura de código atual da nossa função?
+
+Teste se a função createItem utiliza zero como quantidade padrão.
+
+Construindo nosso teste:
+Qual condição da função createItem implementa essa característica?
+Como podemos chamar a função para que entre nessa condição?
+Para a chamada da função createItem com os argumentos 'banana', 'kg' e 1.99, sem o quarto argumento, qual o resultado esperado?
+Considerando que o resultado esperado é um objeto que tenha a propriedade quantity igual a zero, qual o matcher mais adequado?
+Remova o .todo e implemente o teste para a chamada da função createItem com os argumentos 'banana', 'kg' e 1.99, e verifique se o resultado tem a propriedade quantity com o valor 0.
+
+Qual a cobertura de código atual da nossa função? Aumentou em comparação com o exercício anterior?
+
+Teste se a função createItem lança algum erro quando não recebe parâmetros.
+
+Implemente o teste para a chamada da função createItem sem argumentos e verifique se é lançada alguma exceção. Qual o matcher mais adequado? Lembre-se de envolver a chamada da função em uma nova função, para que o Jest possa capturar o erro, conforme orienta a documentação. Não se preocupe em qual erro é retornado, vamos fazer isso no próximo exercício.
+
+Analise a cobertura de código. Qual a cobertura atual?
+
+Teste se a função createItem lança um erro se o nome do item não é uma string.
+
+Vamos supor que tenhamos invertido o nome do item com o preço na chamada da função, passando como parâmetro: 1.99, 'kg', 'banana' e 20. Essa chamada deverá retornar o erro 'O nome do item deve ser uma string'.Afinal, estamos passando 1.99 para o parâmetro name. Como podemos verificar se retorna exatamente esse erro?
+
+Analise a cobertura de código. Mudaram as linhas cobertas no exercício anterior?
+
+Teste se a função createItem lança um erro se o preço do item é negativo ou zero.
+
+Crie um teste que, ao chamar a função passando -0.01 para o preço, verifica se a função lança o erro 'O preço do item deve ser maior que zero'.
+
+Analise a cobertura de código.
+
+Crie um teste que, ao chamar a função passando 0.00 para o preço, verifica se a função lança o erro 'O preço do item deve ser maior que zero'.
+
+Analise novamente a cobertura de código. A cobertura não muda, mas foram testados casos diferentes 😉.
+
+GABARITO
+https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/fc998c60-386e-46bc-83ca-4269beb17e17/section/131a8311-a3d9-4404-ae50-2ea6c971f5d8/day/81b1a1c8-b7a9-432d-89e1-70b2b2264820/lesson/885d95f1-36a1-4e73-abd7-31e7d1ed306b/solution
+
+------------_-----------------------------------------------------------------------------------------------------
+
+Exercícios - agora, a prática
+🚀 Se liga nesse foguete!
+
+Os exercícios destacados com 🚀 são os fundamentais pra você ir bem no projeto! Todos os exercícios vão contribuir com sua formação, mas fique de olho nesses! 👀
+
+Praticando a implementação de testes
+Você vai implementar vários testes em contextos diferentes a fim de consolidar a mecânica e também a forma de pensar em testes.
+
+Copie a função já implementada e desenvolva os testes. Separe a função e o teste em arquivos diferentes para evitar qualquer tipo de problema.
+
+🚀 Exercício 1
+Você ficou responsável por criar os testes de uma aplicação de calculadora. Para isso, copie a função já implementada abaixo e desenvolva os testes: Separe a função e o teste em arquivos diferentes para evitar qualquer tipo de problema.
+
+De olho na dica 👀: Crie os arquivos com o respectivo nome da função. Ex: sum.js e sum.test.js
+
+A função sum(a, b) retorna a soma do parâmetro a com o b:
+Teste se o retorno de sum(4, 5) é 9;
+
+Teste se o retorno de sum(0, 0) é 0.
+
+Teste se a função sum lança um erro quando os parâmetros são number 4 e string '5';
+
+Teste se a mensagem de erro é 'parameters must be numbers' quando realizar a chamada sum(4, '5');
+
+function sum(a, b) {
+  if (typeof a !== 'number' || typeof b !== 'number') {
+    throw new Error('parameters must be numbers');
+  }
+
+  return a + b;
+}
+
+🚀 Exercício 2
+Neste primeiro exercício, use como base a função a seguir que imprime no terminal uma mensagem de boas-vindas de acordo com as informações de personagem passada
+
+// printMessage.js
+let info = {
+  personagem: 'Margarida',
+  origem: 'Pato Donald',
+  nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
+};
+
+const printMessage = (characterInfo) => {
+  return ('Boas vindas, ' + characterInfo.personagem);
+};
+
+console.log(printMessage(info));
+
+module.exports = { info, printMessage };
+
+Considerando a função printMessage, crie um teste em Jest para garantir que o objeto passado como parâmetro possui a propriedade personagem.
+🚀 Exercício 3
+Complementando o teste da função acima que valida a entrada de parâmetro, você pode utilizar o matcher toMatch() para validar a resposta da função.
+
+Verifique se a resposta contém a informação Boas vindas,, antes de chamar o nome da personagem;
+Verifique se a resposta contém o nome correto da personagem.
+
+// printMessageTest.test.js
+const { info } = require('./printMessage.js');
+
+describe('Exercício de teste seção 7.3', () => {
+  it('teste objeto info', () => {
+    expect(info).toHaveProperty('personagem');
+  });
+  // implemente seus testes aqui
+})
+
+🚀 Exercício 4
+Para finalizar o teste da função printMessage, você pode ainda criar um fluxo de exceção dentro da função para criar um erro caso seja enviado um parâmetro que não seja um objeto, ou que não tenha a propriedade personagem como no exemplo abaixo.
+
+// printMessage.js
+let info = {
+  personagem: 'Margarida',
+  origem: 'Pato Donald',
+  nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
+};
+
+const printMessage = (characterInfo) => {
+  if (!characterInfo || characterInfo.personagem === undefined) {
+    throw new Error('objeto inválido');
+  }
+  return ('Boas vindas, '+ characterInfo.personagem);
+};
+
+console.log(printMessage(info));
+
+module.exports = { info, printMessage };
+
+Agora que a função possui um fluxo de exceção, crie uma função de teste para validar se a mensagem de erro é lançada caso a função seja chamada com um objeto inválido.
+
+GABARITO
+https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/fc998c60-386e-46bc-83ca-4269beb17e17/section/131a8311-a3d9-4404-ae50-2ea6c971f5d8/day/81b1a1c8-b7a9-432d-89e1-70b2b2264820/lesson/42511156-6608-423c-99d2-2a6a6d6505c7/solution
+
+------------------------------------------------------------------------------------------------------------------------
+
+Vamos para um desafio?! Neste exercício, você irá praticar o desenvolvimento orientado a testes implementando:
+A função;
+Os testes para essa função;
+Considere os dados abaixo. Você deve criar uma função que receba dois parâmetros: o id do funcionário e a informação disponível sobre ele (firstName, lastName, specialities). Você também deverá criar os testes para essa função. Sua função deverá então retornar os resultados da busca pelo id para aquele funcionário e a informação consultada. Caso o id não conste no quadro de funcionários, sua função deve retornar o erro "ID não identificada". Se a informação que se quer acessar não existir, a função deve retornar o erro "Informação indisponível".
+
+// Dados
+const professionalBoard = [
+  {
+    id: '8579-6',
+    firstName: 'Ana',
+    lastName: 'Gates',
+    specialities: ['UX', 'Design'],
+  },
+  {
+    id: '5569-4',
+    firstName: 'George',
+    lastName: 'Jobs',
+    specialities: ['Frontend', 'Redux', 'React', 'CSS'],
+  },
+  {
+    id: '4456-4',
+    firstName: 'Leila',
+    lastName: 'Zuckerberg',
+    specialities: ['Context API', 'RTL', 'Bootstrap'],
+  },
+  {
+    id: '1256-4',
+    firstName: 'Linda',
+    lastName: 'Bezos',
+    specialities: ['Hooks', 'Context API', 'Tailwind CSS'],
+  },
+  {
+    id: '9852-2-2',
+    firstName: 'Jeff',
+    lastName: 'Cook',
+    specialities: ['Ruby', 'SQL'],
+  },
+  {
+    id: '4678-2',
+    firstName: 'Paul',
+    lastName: 'Dodds',
+    specialities: ['Backend'],
+  },
+];
+
+// Pesquisa
+const searchEmployee = (id, detail) => {
+  // Implemente seu código aqui
+};
+
+GABARITO
+https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/fc998c60-386e-46bc-83ca-4269beb17e17/section/131a8311-a3d9-4404-ae50-2ea6c971f5d8/day/81b1a1c8-b7a9-432d-89e1-70b2b2264820/lesson/939ae887-2913-45da-8fec-a314d68bc727/solution
+
+------------------------------------------------------------------------
+
+
+
