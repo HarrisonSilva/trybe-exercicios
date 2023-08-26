@@ -7,8 +7,10 @@ describe("tests info parameter", () => {
     it("Check if the response contains the Welcome information", () => {
         expect(printMessage(info)).toContain("Boas vindas")
     })
-    it("Check if the response contains the Welcome information", () => {
+    it("Check if the response contains the Margarida", () => {
         expect(printMessage(info)).toContain("Margarida")
     })
-
+    it("testing whether the error message is thrown if the function is called with an invalid object", () => {
+        expect(() => printMessage()).toThrow("objeto inválido");
+    });
 })

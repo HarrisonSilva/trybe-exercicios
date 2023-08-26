@@ -5,9 +5,10 @@ let info = {
 };
 
 const printMessage = (characterInfo) => {
-  return ('Boas vindas, ' + characterInfo.personagem);
+  if (!characterInfo || characterInfo.personagem === undefined) {
+    throw new Error('objeto inválido');
+  }
+  return ('Boas vindas, '+ characterInfo.personagem);
 };
-
-console.log(Object.values(info)[0]);
 
 module.exports = { info, printMessage };
