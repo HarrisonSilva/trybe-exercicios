@@ -1,0 +1,550 @@
+💻 Primeiro passo: Crie a estrutura do forEach.
+
+Para isso, você precisa acessar o array de pessoasAprovadas.forEach.
+
+const pessoasAprovadas = ['Ana Beatriz', 'Caio Nunes', 'Afonso Ribeiro', 'Leonardo Lins']; // lista de nomes
+
+pessoasAprovadas.forEach(() => {});
+
+💻 Segundo passo: Passe os parâmetros nome e index na callback.
+
+const pessoasAprovadas = ['Ana Beatriz', 'Caio Nunes', 'Afonso Ribeiro', 'Leonardo Lins']; // lista de nomes
+
+pessoasAprovadas.forEach((nome, index) => {});
+
+💻 Terceiro passo: Crie a lógica dentro do forEach utilizando a função toUpperCase().
+
+Você pode acessar cada item do array pessoasAprovadas e transformar cada nome em maiúsculo.
+
+const pessoasAprovadas = ['Ana Beatriz', 'Caio Nunes', 'Afonso Ribeiro', 'Leonardo Lins']; // lista de nomes
+
+pessoasAprovadas.forEach((nome, index) => {
+  pessoasAprovadas[index] = pessoasAprovadas[index].toUpperCase(); // acessa cada elemento do array e atualiza para letra maiúscula
+});
+
+console.log(pessoasAprovadas); // ['ANA BEATRIZ', 'CAIO NUNES', 'AFONSO RIBEIRO', 'LEONARDO LINS']
+
+Observação 🔎: perceba que o tipo de dado do array pessoasAprovadas continua sendo um array. Por isso, podemos utilizar a const, já que não estamos reatribuindo valores. Seria o mesmo que acessar cada item do array e transformá-lo em letra maiúscula. Por exemplo, pessoasAprovadas[0].toUpperCase();.
+
+Agora imagine que você tenha desenvolvido um programa para fazer a tabuada do 2. Como você acha que esse código seria ao utilizar o forEach?
+
+Você pode construir a sua lógica da seguinte maneira:
+
+const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+numbers.forEach((element) => {
+  console.log(element * 2); // [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
+});
+
+No exemplo acima, para cada item do array number, o forEach executa um console.log com a multiplicação do elemento atual do array por 2.
+
+Você também pode deixar esse código em apenas uma linha. Para isso, basta remover as chaves {} e deixar o console logo após a arrow. Observe o exemplo abaixo:
+
+const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+numbers.forEach((element) => console.log(element * 2));
+
+Você também pode separar a callback do forEach em uma outra função. Veja o exemplo abaixo:
+
+const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+const multiply = (element) => {
+  console.log(element * 2);
+}
+
+numbers.forEach(multiply);
+
+Imagine que você esteja responsável por exibir a lista de emails de todas as pessoas que trabalham na mesma empresa que você. Para isso, você pode utilizar o forEach para apresentar os emails.
+
+Use o método forEach para exibir a lista de emails com a seguinte frase: O email ${email} está cadastrado em nosso banco de dados!.
+Copiar
+
+
+const emailListInData = [
+  'roberta@email.com',
+  'paulo@email.com',
+  'anaroberta@email.com',
+  'fabiano@email.com',
+];
+
+// Adicione seu código aqui
+
+GABARITO
+https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/fc998c60-386e-46bc-83ca-4269beb17e17/section/ccfff26d-24c9-422e-b886-6ee19f20db14/day/1a8e874c-0ece-4302-88fb-455c93880bb7/lesson/7c95e3e2-00bd-4ea4-87d8-334047d6925e/solution4
+
+------------------------------------------------------------------------------------------------
+
+A função find é utilizada para achar o primeiro elemento que satisfaça a condição passada e retorne o primeiro valor do array que corresponda a essa condição. Caso ele não encontre, retorna undefined.
+
+Por exemplo, imagine que o time de pessoas desenvolvedoras com quem você trabalha resolveu fazer um desafio. Para isso, salvaram todas as idades das pessoas em um array, e você precisa descobrir se existem pessoas com menos de 20 e com mais de 50 anos. Como você faria? 🤔
+
+O find poderia te ajudar nessa tarefa! Observe e execute o exemplo abaixo:
+
+const idades = [18, 21, 42, 20, 19, 21, 30, 73, 82, 45, 48, 50];
+
+idades.find((idade) => idade < 20); // 18
+
+
+No exemplo acima, o retorno foi 18. Isso acontece porque a primeira iteração do find acessa o primeiro item do array, que é o 18. Ao verificar se 18 é menor que 20, a resposta é true, e então o find retorna o número 18 e encerra a execução do código.
+
+Bom, você já descobriu que existem pessoas que trabalham com você e possuem menos de 20 anos. Agora você precisa verificar se existem pessoas com mais de 50 anos. Como você pode fazer? 🤔
+
+Basta seguir a mesma estrutura do exemplo anterior e substituir o número 20 por 50. Observe e execute o código abaixo:
+
+
+const idades = [18, 21, 42, 20, 19, 21, 30, 73, 82, 45, 48, 50];
+
+idades.find((idade) => idade > 50); // 73
+
+O retorno do código acima foi 73, o que significa que existem pessoas com mais de 50 anos que trabalham no mesmo time que você. 🤩
+
+Caso você realize uma verificação com o find que não encontre nenhum elemento, o retorno será undefined. Observe e execute o exemplo abaixo para verificar se existem pessoas com idade igual a 33 anos:
+
+O retorno do código acima foi 73, o que significa que existem pessoas com mais de 50 anos que trabalham no mesmo time que você. 🤩
+
+Caso você realize uma verificação com o find que não encontre nenhum elemento, o retorno será undefined. Observe e execute o exemplo abaixo para verificar se existem pessoas com idade igual a 33 anos:
+
+Para reforçar seu aprendizado sobre o find, observe o gif abaixo, que executa a HOF find para verificar se existe algum número maior que 20:
+
+Vamos verificar passo a passo como a lógica do gif acima acontece:
+
+Existe um array chamado listaNumeros com os valores 10, 20, 30, 40;
+
+Ao executar o find, a função callback é chamada para cada elemento do array listaNumeros;
+
+Se o valor for maior que 20, retorna o valor e para a execução.
+
+O valor retornado é 30, pois é o primeiro valor encontrado que é maior que 20.
+
+Saiba mais 💡: Nesta página do MDN você pode encontrar mais detalhes sobre o find.
+
+Agora que você já viu como o find funciona, que tal praticar? 💻
+
+
+Para fixar
+Utilize o find para retornar o primeiro número do array que é divisível por 3 e 5, caso ele exista:
+
+const numbers = [19, 21, 30, 3, 45, 22, 15];
+
+// Adicione seu código aqui
+
+Utilize o find para encontrar o primeiro nome com cinco letras, caso ele exista:
+
+const names = ['João', 'Irene', 'Fernando', 'Maria'];
+
+// Adicione seu código aqui
+
+Utilize o find para encontrar a música com id igual a '31031685', caso ela exista:
+
+const musicas = [
+  { id: '31031685', title: 'Partita in C moll BWV 997' },
+  { id: '31031686', title: 'Toccata and Fugue, BWV 565' },
+  { id: '31031687', title: 'Chaconne, Partita No. 2 BWV 1004' },
+];
+
+// Adicione seu código aqui
+
+GABARITO
+https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/fc998c60-386e-46bc-83ca-4269beb17e17/section/ccfff26d-24c9-422e-b886-6ee19f20db14/day/1a8e874c-0ece-4302-88fb-455c93880bb7/lesson/24b288cd-786b-452a-bf5d-498264b078fd/solution
+
+---------------------------------------------------------------------------
+
+As funções some e every são parecidas e retornam valores booleanos.
+
+A função some retorna true se ao menos um elemento de um array satisfaz a uma condição. Já o every retorna true se todos os elementos de um array satisfazem a uma condição.
+
+Array.some
+Imagine que você esteja responsável por criar um sistema de acesso para as pessoas colaboradas da empresa em que você trabalha. Para isso, precisa verificar se pelo menos uma dessas pessoas possui o cargo de gerência. Como você faria? 🤔
+
+As informações das pessoas estão dentro de um array de objetos conforme o exemplo abaixo:
+
+const pessoas = [
+  { nome: 'Ana', cargo: 'Analista' },
+  { nome: 'João', cargo: 'Gerência' },
+  { nome: 'Aline', cargo: 'Analista' },
+  { nome: 'Joana', cargo: 'Gerência' },
+];
+
+Como você precisa descobrir se alguma das pessoas possui o cargo de gerência e não precisa de mais detalhes sobre essa pessoa, você pode utilizar o some, que vai retornar true caso encontre alguém com esse cargo, senão vai retornar false. Observe e execute o exemplo abaixo:
+
+Como você precisa descobrir se alguma das pessoas possui o cargo de gerência e não precisa de mais detalhes sobre essa pessoa, você pode utilizar o some, que vai retornar true caso encontre alguém com esse cargo, senão vai retornar false. Observe e execute o exemplo abaixo:
+
+No código acima, é verificado se dentro do array de pessoas existe alguém que possua o cargo de 'Gerência'. O retorno foi true porque existe pelo menos uma pessoa com esse cargo.
+
+Agora, utilizando a mesma lógica, verifique se existe uma pessoa com o cargo de 'Product Owner'. Analise e execute o código abaixo:
+
+const pessoas = [
+  { nome: 'Ana', cargo: 'Analista' },
+  { nome: 'João', cargo: 'Gerência' },
+  { nome: 'Aline', cargo: 'Analista' },
+  { nome: 'Joana', cargo: 'Gerência' },
+];
+
+const verificaCargo = pessoas.some((pessoa) => pessoa.cargo === 'Product Owner');
+
+console.log(verificaCargo); // false
+
+No código acima, o retorno foi false, pois não existe ninguém nesse array com o cargo de 'Product Owner'.
+
+Portanto, tenha em mente que o some só retorna true caso encontre algum elemento que satisfaça à condição. Caso contrário, retorna false.
+
+Agora imagine que você precise verificar se existe algum nome que comece com a letra desejada. Analise e execute o código abaixo:
+
+
+const listNames = ['Maria', 'Manuela', 'Jorge', 'Ricardo', 'Wilson'];
+
+const verifyFirstLetter = (letter, names) => names.some((name) => name[0] === letter);
+
+console.log(verifyFirstLetter('J', listNames)); // true
+console.log(verifyFirstLetter('X', listNames)); // false
+
+O código acima mostra a função verifyFirstLetter, que recebe como primeiro parâmetro letter, que é a letra desejada, e como segundo parâmetro o array chamado listNames.
+
+Dentro da função verifyFirstLetter, é executado o some para verificar se a primeira letra do nome atual (name[0]) da iteração é igual à letra desejada (letter).
+
+Ao verificar se existe um nome que começa com a letra J, o retorno é true. Isso significa que existe um nome que começa com a letra J. Já ao verificar se existe um nome que inicia com X, o retorno é false, pois não existe nenhum nome que inicie com X.
+
+Array.every
+Imagine que você pegou um boletim escolar antigo e quer verificar se passou em todas as matérias. Como você faria? 🤔
+
+Ao utilizar a função every, você consegue resolver esse problema. Caso tenha passado em todas as matérias, o retorno será true; caso contrário, será false. Analise e execute o código abaixo:
+
+const grades = {
+  portugues: 'Aprovado',
+  matematica: 'Reprovado',
+  ingles: 'Aprovado',
+};
+
+const verifyGrades = Object.values(grades).every((grade) => grade === 'Aprovado'); // false
+
+console.log(verifyGrades);
+
+Vamos analisar a função acima?
+
+A variável verifyGrades é responsável por salvar a lógica;
+
+Ao utilizar o Object.values, o retorno será um array com os valores das chaves do objeto grades como ['Aprovado', 'Reprovado', 'Aprovado'];
+
+Então o every executa a callback para cada um dos itens do array e verifica se todos eles possuem o texto 'Aprovado';
+
+O retorno é false, pois nem todos os valores das chaves do objeto grades são iguais a 'Aprovado'.
+
+De olho na dica 👀: para manter seu código conciso e evitar que erros aconteçam, você pode utilizar o método toLowerCase() para deixar todos os itens do array com letras minúsculas. Por exemplo: grade.toLowerCase() === 'aprovado'
+
+Saiba mais 💡: Para saber mais sobre essas funções, o MDN contém explicações e exemplos. Clique aqui e aqui para ler sobre essas funções.
+
+Para fixar
+Você ficou responsável por conferir a lista de pessoas convidadas de uma festa de casamento e precisa verificar se o nome da pessoa está ou não na lista. Para isso, você deve utilizar o código abaixo e desenvolver sua lógica a partir dele:
+
+O nome das pessoas convidadas está salvo em um array chamado names;
+
+A função hasName é responsável por verificar se o nome da pessoa está ou não na lista. Essa função recebe dois parâmetros: arr, que é o array com o nome das pessoas convidadas, e name, que é o nome a ser verificado na lista de convidados (array names).
+
+Caso a pessoa esteja na lista de convidados, o retorno da função hasName deve ser true. Caso contrário, deve ser false.
+
+Dica: use some.
+
+const names = ['Mateus', 'José', 'Ana', 'Cláudia', 'Bruna'];
+
+const hasName = (arr, name) => {
+  //Adicione seu código aqui
+};
+
+console.log(hasName(names, 'Ana'));
+console.log(hasName(names, 'Pedro'));
+
+Você ficou responsável por criar um sistema que verifica se as pessoas da mesma turma possuem uma determinada faixa de idade. Você deve utilizar o array people e desenvolver a sua lógica a partir dele. Para isso:
+
+Crie uma função que verifica se todas as pessoas do array people possuem a idade mínima especificada;
+
+Retorne true se todas tiverem a idade maior ou igual à mínima e, caso contrário, false.
+
+const people = [
+  { name: 'Mateus', age: 18 },
+  { name: 'José', age: 16 },
+  { name: 'Ana', age: 23 },
+  { name: 'Cláudia', age: 20 },
+  { name: 'Bruna', age: 19 },
+];
+
+  //Adicione seu código aqui
+
+console.log(verifyAges(people, 18));
+console.log(verifyAges(people, 14));
+
+Caso queira testar ainda mais a execução das funções some e every, acesse os links abaixo:
+
+https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/fc998c60-386e-46bc-83ca-4269beb17e17/section/ccfff26d-24c9-422e-b886-6ee19f20db14/day/1a8e874c-0ece-4302-88fb-455c93880bb7/lesson/f179b214-eaac-47ec-ba22-a574478f4c0d/solution
+
+Exercícios - agora, a prática
+Parte I
+Nova pessoa contratada
+Você ficou responsável por organizar o sistema de contratação de uma empresa e deve criar uma estrutura de dados que possua o formato { nomeCompleto, email } para representar a nova pessoa contratada. Além disso, você deve gerar os emails de cada pessoa que é contratada na empresa. Para isso:
+
+crie uma função que receba como parâmetro o nome completo da nova pessoa colaboradora e que automaticamente gere um email no formato nome_da_pessoa@trybe.com;
+
+utilize a função newEmployees, definida abaixo, para receber a sua função como parâmetro e criar o objeto de cada pessoa contratada.
+
+const newEmployees = () => {
+  const employees = {
+    id1: '', // Nome: Pedro Guerra -> Chame sua função passando o nome Pedro Guerra como parâmetro, substituindo as aspas
+    id2: '', // Nome: Luiza Drumond -> Chame sua função passando o nome Luiza Drumond como parâmetro, substituindo as aspas
+    id3: '', // Nome: Carla Paiva -> Chame sua função passando o nome Carla Paiva como parâmetro, substituindo as aspas
+  }
+  return employees;
+};
+
+Sorteador de loteria
+Desenvolva uma HOF que retorne o resultado de um sorteio. Essa HOF irá gerar um número aleatório entre 1 e 5, recebendo como parâmetros o número apostado e uma função que checa se o número apostado é igual ao número sorteado. O retorno da sua HOF deve ser uma string (Ex: “Tente novamente” ou “Parabéns, você ganhou”).
+
+Corretor automático de exame
+Crie uma HOF que receberá três parâmetros:
+
+O primeiro será um array de respostas corretas (soluções);
+
+O segundo será um array contendo as respostas fornecidas por uma pessoa estudante;
+
+O terceiro é uma função que compara os dois arrays e então dá uma pontuação baseada nos acertos. Para isso, essa função usará os seguintes critérios:
+
+Uma resposta correta adiciona 1 ponto à pontuação final;
+
+A ausência de uma resposta não altera a pontuação (quando for “N.A”);
+
+Uma resposta incorreta reduz a pontuação final em 0.5 ponto.
+
+Ao final, a HOF deve retornar o total de pontos obtidos através das respostas fornecidas pela pessoa estudante. Utilize os seguintes arrays:
+
+const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
+const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
+
+Parte II - Organizando uma biblioteca
+🚀 Se liga nesse foguete!
+
+Os exercícios destacados com 🚀 são os fundamentais pra você ir bem no projeto! Todos os exercícios vão contribuir com sua formação, mas fique de olho nesses! 👀
+
+Instruções para a realização dos exercícios
+Nos exercícios a seguir, você trabalhará com uma estrutura de dados representando uma lista de livros contendo informações como nome do livro, gênero, pessoa autora do livro e data de lançamento.
+
+Em cada exercício, será pedido que você encontre ou produza alguma informação a respeito dessa lista utilizando as funções que você aprendeu hoje. Todos os exercícios contêm um código-base. Você deverá copiar esse código e salvá-lo em um arquivo nomeado conforme o número do exercício, completando a função vazia.
+
+Por exemplo, o exercício 1 deve ser salvo no arquivo exercise1.js, e assim por diante.
+
+🚀 Organizando uma biblioteca
+Estes exercícios praticam os conceitos de Higher Order Functions associados a outros temas de fundamentos já vistos, como arrow functions, template literals e objetos. Essa mistura de conceitos é muito importante para o seu aprendizado, então use tudo o que sabe para resolver os exercícios!
+
+Utilize o seguinte código como template para realizar os exercícios:
+
+const books = [
+  {
+    id: 1,
+    name: 'As Crônicas de Gelo e Fogo',
+    genre: 'Fantasia',
+    author: {
+      name: 'George R. R. Martin',
+      birthYear: 1948,
+    },
+    releaseYear: 1991,
+  },
+  {
+    id: 2,
+    name: 'O Senhor dos Anéis',
+    genre: 'Fantasia',
+    author: {
+      name: 'J. R. R. Tolkien',
+      birthYear: 1892,
+    },
+    releaseYear: 1954,
+  },
+  {
+    id: 3,
+    name: 'Fundação',
+    genre: 'Ficção Científica',
+    author: {
+      name: 'Isaac Asimov',
+      birthYear: 1920,
+    },
+    releaseYear: 1951,
+  },
+  {
+    id: 4,
+    name: 'Duna',
+    genre: 'Ficção Científica',
+    author: {
+      name: 'Frank Herbert',
+      birthYear: 1920,
+    },
+    releaseYear: 1965,
+  },
+  {
+    id: 5,
+    name: 'A Coisa',
+    genre: 'Terror',
+    author: {
+      name: 'Stephen King',
+      birthYear: 1947,
+    },
+    releaseYear: 1986,
+  },
+  {
+    id: 6,
+    name: 'O Chamado de Cthulhu',
+    genre: 'Terror',
+    author: {
+      name: 'H. P. Lovecraft',
+      birthYear: 1890,
+    },
+    releaseYear: 1928,
+  },
+];
+
+// Adicione o código do exercício aqui:
+
+Encontre o nome da primeira pessoa autora do livro nascida no ano de 1947.
+De olho na dica 👀: use a função find.
+
+const expectedResult = 'Stephen King';
+const authorBornIn1947 = () => {
+  // escreva aqui o seu código
+}
+
+Retorne o nome do livro com menor número de caracteres (menor nome).
+De olho na dica 👀: use a função forEach.
+
+const expectedResult = 'Duna';
+const smallerName = () => {
+  let nameBook;
+  // escreva aqui o seu código
+
+  // Variável nameBook que receberá o valor do menor nome;
+  return nameBook;
+}
+
+Encontre o primeiro livro cujo nome possua 26 caracteres.
+
+const expectedResult = {
+  author: {
+    birthYear: 1948,
+    name: 'George R. R. Martin',
+  },
+  genre: 'Fantasia',
+  id: 1,
+  name: 'As Crônicas de Gelo e Fogo',
+  releaseYear: 1991,
+};
+
+const getNamedBook = () => {
+  // escreva seu código aqui
+}
+
+Encontre o primeiro livro cujo nome possua 26 caracteres.
+
+const expectedResult = {
+  author: {
+    birthYear: 1948,
+    name: 'George R. R. Martin',
+  },
+  genre: 'Fantasia',
+  id: 1,
+  name: 'As Crônicas de Gelo e Fogo',
+  releaseYear: 1991,
+};
+
+const getNamedBook = () => {
+  // escreva seu código aqui
+}
+
+Faça uma função que retorne true se todas as pessoas autoras tiverem nascido no século XX, ou false, caso contrário.
+
+const expectedResult = false;
+
+function everyoneWasBornOnSecXX() {
+  // escreva seu código aqui
+}
+
+Faça uma função que retorne true, se algum livro foi lançado na década de 80, e false, caso contrário.
+
+const expectedResult = true;
+
+const someBookWasReleaseOnThe80s = () => {
+  // escreva seu código aqui
+}
+
+Faça uma função que retorne true, caso nenhuma pessoa autora tenha nascido no mesmo ano, e false, caso contrário.
+
+const expectedResult = false;
+
+const authorUnique = () => {
+  // escreva seu código aqui
+}
+
+GABARITO
+https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/fc998c60-386e-46bc-83ca-4269beb17e17/section/ccfff26d-24c9-422e-b886-6ee19f20db14/day/1a8e874c-0ece-4302-88fb-455c93880bb7/lesson/1d3778cc-5974-40da-a7c7-6a73fcf98011/solution
+
+------------------------------------------------------------------------------
+
+Exercícios - Bônus - Game Actions Simulator
+Parte I
+Nestes exercícios você irá implementar HOFs que simulam um turno de batalha em um jogo. Você irá criar funções que calculam dano, atualizam status e, ao final, retornam os resultados da rodada.
+
+Para os próximos exercícios, copie o código abaixo.
+
+const mage = {
+  healthPoints: 130,
+  intelligence: 45,
+  mana: 125,
+  damage: undefined,
+};
+
+const warrior = {
+  healthPoints: 200,
+  strength: 30,
+  weaponDmg: 2,
+  damage: undefined,
+};
+
+const dragon = {
+  healthPoints: 350,
+  strength: 50,
+  damage: undefined,
+};
+
+const battleMembers = { mage, warrior, dragon };
+
+Crie uma função que retorne o dano do dragão.
+
+O dano será um número aleatório entre 15 (dano mínimo) e o valor do atributo strength (dano máximo).
+
+Crie uma função que retorne o dano causado pelo warrior.
+
+O dano será um número aleatório entre o valor do atributo strength (dano mínimo) e o valor de strength * weaponDmg (dano máximo).
+
+Crie uma função que retorne um objeto com duas chaves e dois valores contendo o dano e a mana gasta pelo mago em um turno.
+
+O dano será um número aleatório entre o valor do atributo intelligence (dano mínimo) e o valor de intelligence * 2 (dano máximo).
+
+A mana consumida por turno é 15. Além disso, a função deve ter uma condicional: caso o mago tenha menos de 15 de mana, o valor de dano recebe uma mensagem (Ex: “Não possui mana suficiente”), e a mana gasta é 0.
+
+Parte II
+Agora que você já possui a implementação das funções relativas aos três exercícios anteriores, passe-as como parâmetro para outras funções que irão compor um objeto gameActions. O objeto será composto por ações do jogo, e cada ação é por definição uma HOF, pois, nesse caso, são funções que recebem como parâmetro outra função.
+
+Copie o código abaixo e inicie sua implementação:
+
+const gameActions = {
+  // Crie as HOFs neste objeto.
+};
+
+Crie a primeira HOF que compõe o objeto gameActions.
+Ela será a função que simula o turno do personagem warrior. Essa HOF receberá como parâmetro a função que calcula o dano deferido pelo personagem warrior e atualizará os healthPoints do monstro dragon. Além disso, ela também deve atualizar o valor da chave damage do warrior.
+
+Crie a segunda HOF que compõe o objeto gameActions.
+Ela será a função que simula o turno do personagem mage. Essa HOF receberá como parâmetro a função que calcula o dano deferido pelo personagem mage e atualizará os healthPoints do monstro dragon. Além disso, ela também deve atualizar o valor das chaves damagee mana do mage.
+
+Crie a terceira HOF que compõe o objeto gameActions.
+Ela será a função que simula o turno do monstro dragon. Essa HOF receberá como parâmetro a função que calcula o dano deferido pelo monstro dragon e atualizará os healthPoints dos personagens mage e warrior. Além disso, ela também deve atualizar o valor da chave damage do monstro.
+
+Adicione ao objeto gameActions uma função de primeira classe que retorna o objeto battleMembers atualizado e faça um console.log para visualizar o resultado final do turno.
+
+GABARITO
+https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/fc998c60-386e-46bc-83ca-4269beb17e17/section/ccfff26d-24c9-422e-b886-6ee19f20db14/day/1a8e874c-0ece-4302-88fb-455c93880bb7/lesson/3602db0e-ae82-4411-ae6c-d7636cd9093f/solution
+
+------------------------------------------------------
