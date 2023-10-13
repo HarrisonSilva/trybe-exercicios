@@ -1,0 +1,30 @@
+img {
+    display: flex;
+    width: 700px;    
+    margin-left: 395px;
+}
+
+h1 {
+    font-size: 70px;
+    text-align: center;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    margin-left: 600px;
+}
+#dog {
+    border-radius: 10px;
+    background-color: blue;
+}
+
+#cat {
+    border-radius: 10px;
+    background-color: yellow;
+}
+
+#surprise {
+    border-radius: 10px;
+    background-color: red;
+}
