@@ -1,0 +1,17 @@
+G = permitido para todos
+
+PG = permitido para crianças menores de 13 anos
+
+PG-13 = permitido para pessoas com mais de 13 anos
+
+R = permitido para pessoas com mais de 17 anos
+
+NC-17 = permitido apenas para adultos
+
+SELECT * FROM sakila.film
+WHERE rating = 'G'
+OR rating = 'PG'
+OR rating = 'PG-13'
+OR rating = 'R'
+OR rating = 'NC-17';
+

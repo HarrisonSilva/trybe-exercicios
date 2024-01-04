@@ -1,0 +1,12 @@
+O setor financeiro quer saber título, descrição, ano de lançamento
+classificação etária (rating) e valor do custo de substituição (replacement_cost)
+dos 100 filmes com o maior custo de substituição, do valor mais alto ao mais baixo
+entre os filmes feitos para menores de idade e que têm o custo mínimo
+de substituição de $18,00 dólares. Em caso de empate, ordene em ordem alfabética
+pelo título. As informações podem ser encontradas na tabela film
+
+
+SELECT title, description, release_year, rating, replacement_cost FROM sakila.film
+WHERE rating = 'PG' AND replacement_cost >= 18.00
+ORDER BY replacement_cost DESC
+LIMIT 100;

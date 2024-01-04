@@ -1,0 +1,6 @@
+Mostre o único caso em que, a partir do 4° caractere no título do filme
+tem-se a palavra gon e a descrição contém a palavra Action.
+
+
+SELECT * FROM sakila.film
+WHERE title LIKE '___%gon' AND description LIKE '%Action%';
