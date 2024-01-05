@@ -1,0 +1,6 @@
+Cadastre três categorias de uma vez só na tabela sakila.category.
+
+INSERT INTO sakila.category (name)
+VALUES ('new category 1'),
+	   ('new category 2'),
+	   ('new category 3');

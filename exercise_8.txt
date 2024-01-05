@@ -1,0 +1,10 @@
+Corrija para $25 o valor do aluguel da tabela filmes com duração maior que 100 
+minutos e que possuem classificação “G”, “PG” ou “PG-13” e um custo
+de substituição maior que $20.
+
+UPDATE sakila.film
+SET replacement_cost = 25.00
+WHERE sakila.film.length > 100
+AND sakila.film.rating IN ('G', 'PG')
+OR sakila.film.rating IN ('PG-13')
+AND sakila.film.replacement_cost;

@@ -1,0 +1,4 @@
+Exclua do banco de dados o ator com o nome de “KARL”.
+
+DELETE FROM sakila.actor
+WHERE sakila.actor.first_name = 'KARL';

@@ -1,0 +1,4 @@
+Altere a linha da tabela categoria onde o valor da coluna x é igual “Sci-fi”
+para “Science Fiction”.
+
+
