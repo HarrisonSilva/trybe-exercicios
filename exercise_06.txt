@@ -1,0 +1,11 @@
+
+Usando o IF na tabela sakila.film, exiba o id do filme, o título e uma coluna extra
+chamada ‘filme visto?’, em que deve-se avaliar se o nome do filme é
+‘ACE GOLDFINGER‘. Caso seja, exiba “OK”. Caso contrário, exiba
+“FALTA ASSISTIR”. Não esqueça de usar um alias para renomear
+a coluna da condicional.
+
+
+
+SELECT film_id, title, IF (title = "ACE GOLDFINGER", "OK", "FALTA ASSISTIR") AS 'filme visto?'
+FROM sakila.film;

@@ -1,0 +1,5 @@
+Faça uma query que transforme a frase 'A Internet mudou o mundo'
+em 'A IA mudou o mundo'.
+
+
+SELECT REPLACE('A Internet mudou o mundo', 'string', 'A IA mudou o mundo');
