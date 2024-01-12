@@ -1,0 +1,12 @@
+Monte uma query que exiba o nome, sobrenome e a media de pagamento (amount)
+paga aos funcionários no ano de 2006. Use as tabelas payment e staff
+Os resultados devem estar agrupados pelo nome e sobrenome do funcionário.
+
+
+
+
+SELECT b.first_name, b.last_name, AVG(a.amount) FROM sakila.payment AS a
+INNER JOIN sakila.staff AS b
+ON a.staff_id = b.staff_id
+WHERE YEAR(a.payment_date) = 2006
+GROUP BY b.first_name, b.last_name;

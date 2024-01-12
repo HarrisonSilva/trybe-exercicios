@@ -1,0 +1,10 @@
+Exiba o nome, email, id do endereço, endereço e distrito dos clientes que
+moram no distrito da California e que contêm “rene” em seus nomes
+As informações podem ser encontradas nas tabelas address e customer.
+
+
+
+SELECT a.first_name, a.email, a.address_id, b.district FROM sakila.customer AS a
+INNER JOIN sakila.address AS b
+ON a.address_id = b.address_id
+WHERE b.district = 'California' AND a.first_name LIKE '%rene%';

@@ -1,0 +1,10 @@
+Exiba o nome, o sobrenome e a quantidade de filmes alugados por cada cliente
+cadastrado. Ordene seus resultados por nome e sobrenome de forma decrescente
+Exiba somente os clientes ativos. As informações podem ser encontradas nas
+tabelas customer e rental.
+
+
+SELECT a.first_name, a.last_name, COUNT(b.customer_id) AS 'Quantidade de Filmes Alugados' FROM sakila.customer AS a
+INNER JOIN sakila.rental AS b
+ON a.customer_id = b.customer_id
+GROUP BY a.customer_id;
